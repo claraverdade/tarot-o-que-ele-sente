@@ -1,19 +1,25 @@
 
 import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import ServicesSection from "@/components/ServicesSection";
+import BenefitsSection from "@/components/BenefitsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import CTASection from "@/components/CTASection";
+import VideoSection from "@/components/VideoSection";
+import OfferSection from "@/components/OfferSection";
+import FAQSection from "@/components/FAQSection";
+import GuaranteeSection from "@/components/GuaranteeSection";
+import FeaturedImageSection from "@/components/FeaturedImageSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <HeroSection />
-      <AboutSection />
-      <ServicesSection />
+      <BenefitsSection />
       <TestimonialsSection />
-      <CTASection />
+      <VideoSection />
+      <OfferSection />
+      <FAQSection />
+      <GuaranteeSection />
+      <FeaturedImageSection />
       <Footer />
     </div>
   );

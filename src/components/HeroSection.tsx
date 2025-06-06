@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Star, Sparkles, Moon } from "lucide-react";
+import { Star, Sparkles, Moon, Clock, MessageCircle } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -33,35 +33,35 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-4 text-center z-10">
         <div className="max-w-4xl mx-auto animate-fade-in">
-          <h1 className="font-cinzel text-5xl md:text-7xl font-bold text-mystical-graphite mb-6 leading-tight">
-            Descubra os Segredos do
-            <span className="gold-text block mt-2">Seu Destino</span>
+          <h1 className="font-cinzel text-4xl md:text-6xl font-bold text-mystical-graphite mb-6 leading-tight">
+            "Você Ainda Sente Algo…
+            <span className="gold-text block mt-2">Mas Ele Simplesmente Sumiu"</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-mystical-midnight mb-8 max-w-2xl mx-auto leading-relaxed">
-            Consultas de Tarot personalizadas que revelam clareza, orientação e respostas para suas questões mais profundas
+            Resposta em até 24h por áudio no WhatsApp – Por apenas R$ 25
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button className="mystical-button text-lg px-8 py-4 h-auto">
-              Agendar Consulta
+              Quero Minha Leitura Agora
             </Button>
             <Button 
               variant="outline" 
               className="border-mystical-purple text-mystical-purple hover:bg-mystical-purple hover:text-white transition-all duration-300 text-lg px-8 py-4 h-auto"
             >
-              Saber Mais
+              Ver Experiência Completa
             </Button>
           </div>
 
           <div className="flex justify-center items-center gap-8 text-mystical-cosmic">
             <div className="flex items-center gap-2">
-              <Star className="w-5 h-5 text-mystical-purple" />
-              <span>+500 Consultas</span>
+              <Clock className="w-5 h-5 text-mystical-purple" />
+              <span>Entrega em 24h</span>
             </div>
             <div className="flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-mystical-purple" />
-              <span>15 Anos de Experiência</span>
+              <MessageCircle className="w-5 h-5 text-mystical-purple" />
+              <span>Direto no WhatsApp</span>
             </div>
           </div>
         </div>
