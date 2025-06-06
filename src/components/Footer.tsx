@@ -1,9 +1,6 @@
-
 import { Heart, Instagram, MessageCircle, Mail, FileText } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-mystical-graphite border-t border-gray-200">
+  return <footer className="bg-mystical-graphite border-t border-gray-200">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="col-span-2 md:col-span-1">
@@ -66,13 +63,9 @@ const Footer = () => {
           <p className="text-gray-400 flex items-center justify-center gap-2">
             Feito com <Heart className="w-4 h-4 text-mystical-purple" /> para conectar corações
           </p>
-          <p className="text-gray-500 text-sm mt-2">
-            © 2025 | Tiago L Franco – Leitura de Tarot. Todos os direitos reservados.
-          </p>
+          <p className="text-gray-500 text-sm mt-2">© 2025 | Tiago  Franco – Leitura de Tarot. Todos os direitos reservados.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

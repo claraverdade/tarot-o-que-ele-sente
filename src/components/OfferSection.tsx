@@ -1,11 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, Clock, MessageCircle, FileText, Star } from "lucide-react";
-
 const OfferSection = () => {
-  return (
-    <section className="py-20 bg-cosmic-gradient relative overflow-hidden">
+  return <section className="py-20 bg-cosmic-gradient relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
@@ -21,7 +18,7 @@ const OfferSection = () => {
                 <h3 className="font-cinzel text-2xl font-semibold text-mystical-graphite mb-2">
                   Leitura Rápida
                 </h3>
-                <p className="text-mystical-midnight mb-4">Resposta completa em até 24h</p>
+                <p className="text-mystical-midnight mb-4">Resposta completa em até 12h</p>
                 
                 <div className="mb-6">
                   <span className="text-4xl font-bold text-mystical-graphite">R$ 25</span>
@@ -72,7 +69,7 @@ const OfferSection = () => {
                 </li>
                 <li className="flex items-center gap-2 text-mystical-midnight">
                   <Check className="w-5 h-5 text-mystical-purple" />
-                  <span>PDF resumido detalhado</span>
+                  <span>Consulta de 30 min ao vivo</span>
                 </li>
                 <li className="flex items-center gap-2 text-mystical-midnight">
                   <Check className="w-5 h-5 text-mystical-purple" />
@@ -88,18 +85,13 @@ const OfferSection = () => {
                 </li>
               </ul>
 
-              <Button 
-                variant="outline"
-                className="w-full border-mystical-purple text-mystical-purple hover:bg-mystical-purple hover:text-white text-lg py-4 h-auto"
-              >
+              <Button variant="outline" className="w-full border-mystical-purple text-mystical-purple hover:bg-mystical-purple hover:text-white text-lg py-4 h-auto">
                 Quero a Experiência Completa
               </Button>
             </Card>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default OfferSection;
