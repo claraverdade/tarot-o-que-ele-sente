@@ -1,8 +1,11 @@
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, Clock, MessageCircle, FileText, Star } from "lucide-react";
+
 const OfferSection = () => {
-  return <section className="py-20 bg-cosmic-gradient relative overflow-hidden">
+  return (
+    <section className="py-20 bg-cosmic-gradient relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
@@ -44,7 +47,10 @@ const OfferSection = () => {
                 </li>
               </ul>
 
-              <Button className="mystical-button w-full text-lg py-4 h-auto">
+              <Button 
+                className="mystical-button w-full text-lg py-4 h-auto"
+                onClick={() => window.open('https://loja.infinitepay.io/franco-atendimento/nwl4332-1-pergunta-ao-tarot', '_blank')}
+              >
                 Quero Minha Leitura Agora
               </Button>
             </Card>
@@ -85,13 +91,19 @@ const OfferSection = () => {
                 </li>
               </ul>
 
-              <Button variant="outline" className="w-full border-mystical-purple text-mystical-purple hover:bg-mystical-purple hover:text-white text-lg py-4 h-auto">
+              <Button 
+                variant="outline" 
+                className="w-full border-mystical-purple text-mystical-purple hover:bg-mystical-purple hover:text-white text-lg py-4 h-auto"
+                onClick={() => window.open('https://loja.infinitepay.io/franco-atendimento/itw3422-consulta-de-tarot-25-min', '_blank')}
+              >
                 Quero a Experiência Completa
               </Button>
             </Card>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default OfferSection;
