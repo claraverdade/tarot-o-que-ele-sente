@@ -58,7 +58,7 @@ const OfferSection = () => {
                 <p className="text-mystical-midnight mb-4">Leitura aprofundada + bônus exclusivos</p>
                 
                 <div className="mb-6">
-                  <span className="text-4xl font-bold text-mystical-graphite">R$ 99</span>
+                  <span className="text-4xl font-bold text-mystical-graphite">R$ 150</span>
                 </div>
               </div>
 
