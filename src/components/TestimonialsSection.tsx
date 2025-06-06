@@ -49,14 +49,14 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-mystical-midnight">
+    <section className="py-20 bg-mystical-beige">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-cinzel text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="font-cinzel text-4xl md:text-5xl font-bold text-mystical-graphite mb-6">
               O que Dizem Nossos <span className="gold-text">Clientes</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-mystical-midnight max-w-3xl mx-auto">
               Transformações reais, experiências autênticas
             </p>
           </div>
@@ -68,14 +68,14 @@ const TestimonialsSection = () => {
                 className="mystical-card p-6 transform hover:scale-105 transition-transform duration-300"
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-mystical-gold rounded-full flex items-center justify-center">
-                    <span className="text-mystical-midnight font-bold">
+                  <div className="w-12 h-12 bg-mystical-purple rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold">
                       {testimonial.avatar}
                     </span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-400">{testimonial.location}</p>
+                    <h4 className="font-semibold text-mystical-graphite">{testimonial.name}</h4>
+                    <p className="text-sm text-mystical-cosmic">{testimonial.location}</p>
                   </div>
                 </div>
 
@@ -83,14 +83,14 @@ const TestimonialsSection = () => {
                   {[...Array(testimonial.rating)].map((_, starIndex) => (
                     <Star 
                       key={starIndex} 
-                      className="w-4 h-4 fill-mystical-gold text-mystical-gold" 
+                      className="w-4 h-4 fill-mystical-purple text-mystical-purple" 
                     />
                   ))}
                 </div>
 
                 <div className="relative">
-                  <Quote className="w-6 h-6 text-mystical-gold opacity-50 mb-2" />
-                  <p className="text-gray-300 leading-relaxed italic">
+                  <Quote className="w-6 h-6 text-mystical-purple opacity-50 mb-2" />
+                  <p className="text-mystical-midnight leading-relaxed italic">
                     "{testimonial.text}"
                   </p>
                 </div>
@@ -99,19 +99,19 @@ const TestimonialsSection = () => {
           </div>
 
           <div className="text-center mt-12">
-            <div className="bg-mystical-card rounded-lg p-8 max-w-2xl mx-auto">
-              <div className="flex items-center justify-center gap-8 text-white">
+            <div className="mystical-card p-8 max-w-2xl mx-auto">
+              <div className="flex items-center justify-center gap-8 text-mystical-graphite">
                 <div className="text-center">
                   <div className="text-3xl font-bold gold-text">500+</div>
-                  <div className="text-sm text-gray-300">Consultas Realizadas</div>
+                  <div className="text-sm text-mystical-midnight">Consultas Realizadas</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold gold-text">98%</div>
-                  <div className="text-sm text-gray-300">Satisfação</div>
+                  <div className="text-sm text-mystical-midnight">Satisfação</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold gold-text">15</div>
-                  <div className="text-sm text-gray-300">Anos de Experiência</div>
+                  <div className="text-sm text-mystical-midnight">Anos de Experiência</div>
                 </div>
               </div>
             </div>

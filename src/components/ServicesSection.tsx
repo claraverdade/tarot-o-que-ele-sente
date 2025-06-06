@@ -51,14 +51,14 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-mystical-midnight to-mystical-cosmic">
+    <section className="py-20 bg-mystical-light">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-cinzel text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="font-cinzel text-4xl md:text-5xl font-bold text-mystical-graphite mb-6">
               Tipos de <span className="gold-text">Consulta</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-mystical-midnight max-w-3xl mx-auto">
               Escolha a modalidade que melhor se adapta às suas necessidades e momento atual
             </p>
           </div>
@@ -68,40 +68,40 @@ const ServicesSection = () => {
               <Card 
                 key={index} 
                 className={`mystical-card p-8 relative transform hover:scale-105 transition-all duration-300 ${
-                  service.popular ? 'ring-2 ring-mystical-gold' : ''
+                  service.popular ? 'ring-2 ring-mystical-purple' : ''
                 }`}
               >
                 {service.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gold-gradient text-mystical-midnight px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gold-gradient text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Mais Popular
                     </span>
                   </div>
                 )}
 
                 <div className="text-center mb-6">
-                  <div className="bg-mystical-gold rounded-full p-4 w-16 h-16 mx-auto mb-4">
-                    <service.icon className="w-8 h-8 text-mystical-midnight" />
+                  <div className="bg-mystical-purple rounded-full p-4 w-16 h-16 mx-auto mb-4">
+                    <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="font-cinzel text-2xl font-semibold text-white mb-2">
+                  <h3 className="font-cinzel text-2xl font-semibold text-mystical-graphite mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <p className="text-mystical-midnight mb-4">{service.description}</p>
                   
-                  <div className="flex items-center justify-center gap-2 text-mystical-gold mb-4">
+                  <div className="flex items-center justify-center gap-2 text-mystical-purple mb-4">
                     <Clock className="w-4 h-4" />
                     <span className="text-sm">{service.duration}</span>
                   </div>
 
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-white">{service.price}</span>
+                    <span className="text-4xl font-bold text-mystical-graphite">{service.price}</span>
                   </div>
                 </div>
 
                 <ul className="space-y-3 mb-8">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start gap-2 text-gray-300">
-                      <div className="w-2 h-2 bg-mystical-gold rounded-full mt-2 flex-shrink-0"></div>
+                    <li key={featureIndex} className="flex items-start gap-2 text-mystical-midnight">
+                      <div className="w-2 h-2 bg-mystical-purple rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-sm">{feature}</span>
                     </li>
                   ))}
@@ -121,12 +121,12 @@ const ServicesSection = () => {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-gray-300 mb-4">
+            <p className="text-mystical-midnight mb-4">
               Todas as consultas podem ser realizadas presencialmente ou online
             </p>
             <Button 
               variant="outline" 
-              className="border-mystical-gold text-mystical-gold hover:bg-mystical-gold hover:text-mystical-midnight"
+              className="border-mystical-purple text-mystical-purple hover:bg-mystical-purple hover:text-white"
             >
               Ver Horários Disponíveis
             </Button>

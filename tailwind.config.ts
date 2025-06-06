@@ -64,18 +64,22 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				mystical: {
-					purple: '#6B46C1',
-					'purple-dark': '#4C1D95',
-					gold: '#F59E0B',
-					'gold-light': '#FCD34D',
-					midnight: '#1E1B4B',
-					cosmic: '#312E81'
+					purple: '#4C1D95',
+					'purple-dark': '#312E81',
+					gold: '#92400E',
+					'gold-light': '#B45309',
+					midnight: '#374151',
+					cosmic: '#6B7280',
+					light: '#F9FAFB',
+					beige: '#FEF7ED',
+					graphite: '#1F2937'
 				}
 			},
 			backgroundImage: {
-				'cosmic-gradient': 'linear-gradient(135deg, #1E1B4B 0%, #312E81 50%, #6B46C1 100%)',
-				'gold-gradient': 'linear-gradient(135deg, #F59E0B 0%, #FCD34D 100%)',
-				'mystical-radial': 'radial-gradient(circle at center, #6B46C1 0%, #1E1B4B 100%)'
+				'cosmic-gradient': 'linear-gradient(135deg, #F9FAFB 0%, #FEF7ED 50%, #F3F4F6 100%)',
+				'gold-gradient': 'linear-gradient(135deg, #4C1D95 0%, #312E81 100%)',
+				'mystical-radial': 'radial-gradient(circle at center, #F9FAFB 0%, #FEF7ED 100%)',
+				'mystical-card': 'linear-gradient(135deg, #FFFFFF 0%, #F9FAFB 100%)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -111,10 +115,10 @@ export default {
 				},
 				'glow': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px rgba(107, 70, 193, 0.3)'
+						boxShadow: '0 0 20px rgba(76, 29, 149, 0.3)'
 					},
 					'50%': {
-						boxShadow: '0 0 40px rgba(107, 70, 193, 0.6)'
+						boxShadow: '0 0 40px rgba(76, 29, 149, 0.6)'
 					}
 				},
 				'float': {

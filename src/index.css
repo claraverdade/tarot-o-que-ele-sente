@@ -99,7 +99,7 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-mystical-light text-mystical-graphite;
     font-family: 'Inter', sans-serif;
   }
 
@@ -110,15 +110,15 @@
 
 @layer components {
   .mystical-card {
-    @apply bg-gradient-to-br from-mystical-purple/10 to-mystical-cosmic/20 backdrop-blur-sm border border-mystical-purple/20 rounded-xl;
+    @apply bg-mystical-card backdrop-blur-sm border border-gray-200 rounded-xl shadow-lg;
   }
   
   .gold-text {
-    @apply bg-gradient-to-r from-mystical-gold to-mystical-gold-light bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-mystical-purple to-mystical-purple-dark bg-clip-text text-transparent;
   }
   
   .mystical-button {
-    @apply bg-gold-gradient text-mystical-midnight font-semibold py-3 px-8 rounded-full transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-mystical-gold/25;
+    @apply bg-gold-gradient text-white font-semibold py-3 px-8 rounded-full transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-mystical-purple/25;
   }
 }
 
@@ -136,12 +136,13 @@
   position: absolute;
   width: 2px;
   height: 2px;
-  background: white;
+  background: #4C1D95;
   border-radius: 50%;
   animation: twinkle 4s ease-in-out infinite;
+  opacity: 0.3;
 }
 
 @keyframes twinkle {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.6; }
 }
