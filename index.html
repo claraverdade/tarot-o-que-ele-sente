@@ -4,20 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Você Ainda Sente Algo… Mas Ele Sumiu | Leitura de Tarot</title>
-  <meta name="description" content="Consulta de Tarot rápida: descubra o motivo do sumiço dele em até 12 h, por áudio no WhatsApp, por apenas R$ 25." />
-  
+  <meta name="description" content="Consulta de Tarot rápida: descubra o motivo do sumiço dele em até 12h, por áudio no WhatsApp, por apenas R$25." />
+
   <!-- Google Fonts: Montserrat -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
     rel="stylesheet"
   />
 
+  <!-- Font Awesome (ícones para redes sociais, checkmarks, etc.) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-papRbH9jJ3fC0+hkD/B5z1OTBbPmeKt1VkYGr5t7HPxskX9N/cE0BokyaH9OzJMQ1t1fyjjoedbZyE+hXbKgSQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
   <style>
-    /* Reset básico */
+    /* ===== Reset Básico ===== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     body {
       font-family: "Montserrat", sans-serif;
@@ -29,94 +41,199 @@
       text-decoration: none;
       color: inherit;
     }
-    h1, h2 {
+    ul {
+      list-style: none;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    /* ===== Layout Geral ===== */
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+    h1, h2, h3 {
       font-weight: 700;
       text-align: center;
     }
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.75rem;
+      line-height: 1.2;
       margin-bottom: 0.5rem;
+      color: #2a2a2a;
     }
     h2 {
       font-size: 1.75rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      color: #2a2a2a;
     }
-    .container {
-      width: 90%;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem 0;
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: #2a2a2a;
+    }
+    p {
+      color: #444;
     }
 
-    /* ===== Hero ===== */
+    /* ===== Hero (Topo) ===== */
     .hero {
+      position: relative;
+      height: 80vh;
+      min-height: 500px;
+      background: url("https://source.unsplash.com/1600x900/?tarot,crystal") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 4rem 0 3rem;
+      color: #fff;
     }
-    .subtitulo {
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 0 1rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    .hero p.subtitulo {
       font-size: 1.1rem;
-      color: #555;
       margin-bottom: 2rem;
+      color: #f0f0f0;
     }
     .btn-primary {
       display: inline-block;
       background-color: #5d3fd3;
       color: #fff;
-      padding: 0.75rem 1.5rem;
+      padding: 0.75rem 1.75rem;
       border-radius: 6px;
       font-weight: 700;
       transition: background-color 0.2s ease-in-out;
-      margin-top: 1rem;
     }
     .btn-primary:hover {
       background-color: #4b2fb0;
     }
 
     /* ===== Benefícios ===== */
+    .beneficios {
+      margin-top: -4rem;
+      padding: 4rem 0 3rem;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    }
     .beneficios ul {
-      list-style: none;
-      margin-top: 1rem;
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    @media (min-width: 600px) {
+      .beneficios ul {
+        grid-template-columns: 1fr 1fr;
+      }
     }
     .beneficios li {
-      margin-bottom: 1rem;
-      padding-left: 2rem;
       position: relative;
+      padding-left: 2.5rem;
+      font-size: 1.05rem;
+      color: #444;
     }
     .beneficios li::before {
-      content: "✔";
+      content: "\f00c"; /* ícone FontAwesome “check” */
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
       position: absolute;
       left: 0;
+      top: 0;
       color: #5d3fd3;
-      font-weight: bold;
+      font-size: 1.2rem;
+      line-height: 1;
     }
 
     /* ===== Depoimentos ===== */
-    .depoimentos blockquote {
-      margin: 2rem 0;
-      padding: 1rem 1.5rem;
-      border-left: 4px solid #5d3fd3;
-      background-color: #fff;
-      border-radius: 4px;
+    .depoimentos {
+      padding: 3rem 0 2rem;
     }
-    .depoimentos blockquote p {
+    .depoimento-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .depoimento-wrapper {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (min-width: 1024px) {
+      .depoimento-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+    .depoimento-card {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 260px;
+    }
+    .depoimento-card p {
       font-style: italic;
       color: #444;
+      margin-bottom: 1rem;
     }
-    .depoimentos footer {
-      margin-top: 0.75rem;
-      text-align: right;
+    .depoimento-card footer {
+      text-align: left;
       font-weight: 700;
-      color: #333;
+      color: #2a2a2a;
+    }
+    .depoimento-card footer span.local {
+      display: block;
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.25rem;
+    }
+    .depoimento-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
     }
 
     /* ===== Vídeo ===== */
+    .video {
+      margin: 3rem 0;
+      padding: 3rem 0;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+    }
     .video-wrapper {
       position: relative;
       padding-bottom: 56.25%;
-      /* 16:9 */
       height: 0;
       overflow: hidden;
-      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
     .video-wrapper iframe {
       position: absolute;
@@ -124,35 +241,43 @@
       left: 0;
       width: 100%;
       height: 100%;
+      border: 0;
     }
 
     /* ===== Ofertas e CTAs ===== */
     .ofertas {
       margin: 3rem 0;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
     }
     .oferta-card {
       background-color: #fff;
-      padding: 1.75rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
       text-align: center;
+      margin-bottom: 2rem;
     }
-    .oferta-card h2 {
+    .oferta-card h3 {
       margin-bottom: 0.5rem;
       color: #5d3fd3;
+      font-size: 1.5rem;
     }
-    .oferta-card p {
-      margin-bottom: 1rem;
-      font-size: 1.25rem;
+    .oferta-card p.preco {
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
       font-weight: 700;
+      color: #2a2a2a;
     }
 
     /* ===== FAQ ===== */
-    .faq-item {
+    .faq {
+      margin: 3rem 0;
+    }
+    .faq h2 {
       margin-bottom: 1.5rem;
+      color: #2a2a2a;
+    }
+    .faq-item {
+      margin-bottom: 1.75rem;
     }
     .faq-item p:first-of-type {
       font-weight: 700;
@@ -161,29 +286,31 @@
     }
     .faq-item p:last-of-type {
       color: #555;
+      line-height: 1.4;
     }
 
     /* ===== Garantia ===== */
     .garantia {
       background-color: #fff;
-      padding: 1.75rem;
-      border-radius: 8px;
-      margin: 2rem 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 2.5rem 1.5rem;
+      border-radius: 12px;
+      margin: 3rem 0;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
     }
     .garantia h2 {
       margin-bottom: 1rem;
       color: #5d3fd3;
     }
     .garantia p {
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
       color: #555;
+      line-height: 1.4;
     }
 
     /* ===== Footer ===== */
     footer {
       background-color: #f1f0ed;
-      padding: 2rem 0 1rem;
+      padding: 3rem 1rem;
       text-align: center;
       font-size: 0.9rem;
       color: #666;
@@ -193,9 +320,22 @@
       margin: 0 0.5rem;
       color: #5d3fd3;
       font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .links-rodape {
+      margin-bottom: 1rem;
     }
     .redes-sociais a {
-      margin: 0 0.3rem;
+      margin: 0 0.5rem;
+      color: #555;
+      font-size: 1.25rem;
+      transition: color 0.2s;
+    }
+    .redes-sociais a:hover {
+      color: #5d3fd3;
+    }
+    footer p {
+      margin-top: 1.25rem;
       color: #555;
     }
   </style>
@@ -203,125 +343,169 @@
 <body>
   <!-- ===== Hero Section ===== -->
   <section class="hero">
-    <div class="container">
+    <div class="hero-content">
       <h1>Você Ainda Sente Algo… Mas Ele Simplesmente Sumiu</h1>
       <p class="subtitulo">
-        Resposta em até 12&nbsp;h por áudio no WhatsApp&nbsp;– Por apenas <strong>R$&nbsp;25</strong>
+        Resposta em até 12h por áudio no WhatsApp&nbsp;– Por apenas <strong>R$ 25</strong>
       </p>
-      <a href="https://loja.infinitepay.io/franco-atendimento/itw3422-consulta-de-tarot-25-min" class="btn-primary">Quero Minha Leitura Agora</a>
+      <a href="https://loja.infinitepay.io/franco-atendimento/itw3422-consulta-de-tarot-25-min" class="btn-primary">
+        Quero Minha Leitura Agora
+      </a>
     </div>
   </section>
 
   <!-- ===== Benefícios ===== -->
-  <section class="beneficios">
-    <div class="container">
-      <h2>O Que Você Recebe Quando Encomenda Sua Leitura</h2>
-      <ul>
-        <li><strong>Descubra o Motivo Real do “Sumiço”</strong></li>
-        <li><strong>Orientação Prática para Reconquistá-lo (ou Seguir em Frente)</strong></li>
-        <li><strong>Leitura Intuitiva e Empática, Feita Exclusivamente Para Você</strong></li>
-        <li><strong>Entrega Rápida: Áudio de Até 5 Minutos no WhatsApp em 12&nbsp;h</strong></li>
-        <li><strong>PDF Resumido com os Pontos Principais e Mini-Plano de Ação</strong></li>
-      </ul>
-    </div>
+  <section class="beneficios container" id="beneficios">
+    <h2>O Que Você Recebe Quando Encomenda Sua Leitura</h2>
+    <ul>
+      <li><strong>Descubra o Motivo Real do “Sumiço”</strong></li>
+      <li><strong>Orientação Prática para Reconquistá-lo (ou Seguir em Frente)</strong></li>
+      <li><strong>Leitura Intuitiva e Empática, Feita Exclusivamente Para Você</strong></li>
+      <li><strong>Entrega Rápida: Áudio de Até 5 Minutos no WhatsApp em 12h</strong></li>
+      <li><strong>PDF Resumido com os Pontos Principais e Mini-Plano de Ação</strong></li>
+    </ul>
   </section>
 
   <!-- ===== Depoimentos ===== -->
-  <section class="depoimentos">
-    <div class="container">
-      <h2>O Que Elas Falam</h2>
-      <blockquote>
+  <section class="depoimentos container" id="depoimentos">
+    <h2>O Que Elas Falam</h2>
+    <div class="depoimento-wrapper">
+      <!-- Depoimento 1 -->
+      <div class="depoimento-card">
+        <img
+          src="https://ui-avatars.com/api/?name=Ana&background=5D3FD3&color=fff&rounded=true&size=60"
+          alt="Avatar de Ana"
+          class="depoimento-avatar"
+        />
         <p>“Ele sumiu por dois meses. Achei que não me amava mais. Com essa leitura, eu entendi que havia bloqueios emocionais de ambos. Hoje sinto mais confiança e clareza.”</p>
-        <footer>— Ana, 28 anos, São Paulo</footer>
-      </blockquote>
-      <blockquote>
-        <p>“Minha cabeça estava uma bagunça. O áudio me mostrou os padrões que eu nem via. Em menos de 12&nbsp;h, fiquei mais segura para conversar com ele.”</p>
-        <footer>— Vanessa, 31 anos, Belo Horizonte</footer>
-      </blockquote>
-      <blockquote>
+        <footer>— Ana, 28 anos<span class="local">São Paulo</span></footer>
+      </div>
+
+      <!-- Depoimento 2 -->
+      <div class="depoimento-card">
+        <img
+          src="https://ui-avatars.com/api/?name=Vanessa&background=5D3FD3&color=fff&rounded=true&size=60"
+          alt="Avatar de Vanessa"
+          class="depoimento-avatar"
+        />
+        <p>“Minha cabeça estava uma bagunça. O áudio me mostrou os padrões que eu nem via. Em menos de 12h, fiquei mais segura para conversar com ele.”</p>
+        <footer>— Vanessa, 31 anos<span class="local">Belo Horizonte</span></footer>
+      </div>
+
+      <!-- Depoimento 3 -->
+      <div class="depoimento-card">
+        <img
+          src="https://ui-avatars.com/api/?name=Mariana&background=5D3FD3&color=fff&rounded=true&size=60"
+          alt="Avatar de Mariana"
+          class="depoimento-avatar"
+        />
         <p>“Já tinha tentado resolver tudo sozinha, mas não conseguia entender o silêncio dele. Essa leitura me deu luz para seguir adiante, sem sufocar ninguém.”</p>
-        <footer>— Mariana, 24 anos, Curitiba</footer>
-      </blockquote>
+        <footer>— Mariana, 24 anos<span class="local">Curitiba</span></footer>
+      </div>
     </div>
   </section>
 
-  <!-- ===== Vídeo de Apresentação (Opcional) ===== -->
-  <!-- Assim que gravar, substitua SEU_VIDEO_ID pelo ID do YouTube -->
-  <section class="video">
-    <div class="container">
-      <h2>Assista ao Vídeo de Apresentação</h2>
-      <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/SEU_VIDEO_ID"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
+  <!-- ===== Vídeo de Apresentação ===== -->
+  <section class="video container">
+    <h2>Assista ao Vídeo de Apresentação</h2>
+    <div class="video-wrapper">
+      <!-- Substitua SEU_VIDEO_ID pelo ID real do seu vídeo no YouTube -->
+      <iframe
+        src="https://www.youtube.com/embed/SEU_VIDEO_ID"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
     </div>
   </section>
 
   <!-- ===== Ofertas e CTAs ===== -->
-  <section class="ofertas">
-    <div class="container">
-      <div class="oferta-card">
-        <h2>Leitura Rápida em 12&nbsp;h</h2>
-        <p><strong>R$ 25</strong></p>
-        <a href="https://loja.infinitepay.io/franco-atendimento/itw3422-consulta-de-tarot-25-min" class="btn-primary">Quero Minha Leitura Agora</a>
-      </div>
+  <section class="ofertas container">
+    <div class="oferta-card">
+      <h3>Leitura Rápida em 12h</h3>
+      <p class="preco">R$ 25</p>
+      <a href="https://loja.infinitepay.io/franco-atendimento/itw3422-consulta-de-tarot-25-min" class="btn-primary">
+        Quero Minha Leitura Agora
+      </a>
     </div>
+    <!-- Exemplo de oferta premium (descomente se quiser usar)
+    <div class="oferta-card premium">
+      <h3>Oferta Premium</h3>
+      <p class="preco">R$ 99</p>
+      <p>Leitura Completa + Bônus PDF + Check-in Pós-Leitura</p>
+      <a href="https://seu-link-premium.com" class="btn-primary">
+        Quero a Experiência Completa
+      </a>
+    </div>
+    -->
   </section>
 
   <!-- ===== FAQ ===== -->
-  <section class="faq">
-    <div class="container">
-      <h2>Perguntas Frequentes</h2>
+  <section class="faq container" id="faq">
+    <h2>Perguntas Frequentes</h2>
 
-      <div class="faq-item">
-        <p><strong>E se eu não receber a leitura em 12 h?</strong></p>
-        <p>Envie a palavra <strong>“Atraso”</strong> no WhatsApp <a href="https://wa.me/5514999059950" target="_blank">(14 99905-9950)</a> que refazemos a leitura em até 12 h ou devolvemos 100 % do valor.</p>
-      </div>
+    <div class="faq-item">
+      <p><strong>E se eu não receber a leitura em 12h?</strong></p>
+      <p>
+        Envie a palavra <strong>“Atraso”</strong> no WhatsApp 
+        <a href="https://wa.me/5514999059950" target="_blank">(14 99905-9950)</a> 
+        que refazemos a leitura em até 12h ou devolvemos 100 % do valor.
+      </p>
+    </div>
 
-      <div class="faq-item">
-        <p><strong>Como recebo o áudio da leitura?</strong></p>
-        <p>Você receberá um link de download no próprio WhatsApp. Basta clicar para ouvir.</p>
-      </div>
+    <div class="faq-item">
+      <p><strong>Como recebo o áudio da leitura?</strong></p>
+      <p>Você receberá um link de download no próprio WhatsApp. Basta clicar para ouvir.</p>
+    </div>
 
-      <div class="faq-item">
-        <p><strong>E se eu quiser conversar pessoalmente após a leitura?</strong></p>
-        <p>Disponibilizamos consultoria individual (sessão 30 min) como upsell, mediante agendamento. Consulte valores no WhatsApp.</p>
-      </div>
+    <div class="faq-item">
+      <p><strong>E se eu quiser conversar pessoalmente após a leitura?</strong></p>
+      <p>Disponibilizamos consultoria individual (sessão 30 min) como upsell, mediante agendamento. Consulte valores no WhatsApp.</p>
+    </div>
 
-      <div class="faq-item">
-        <p><strong>Posso pagar de outra forma se não conseguir pelo link?</strong></p>
-        <p>Sim: PIX ou Cartão. Envie “PIX” no WhatsApp <a href="https://wa.me/5514999059950" target="_blank">(14 99905-9950)</a> para receber a chave e finalizar o pagamento.</p>
-      </div>
-
+    <div class="faq-item">
+      <p><strong>Posso pagar de outra forma se não conseguir pelo link?</strong></p>
+      <p>
+        Sim: <strong>PIX</strong> ou Cartão. Envie “PIX” no WhatsApp 
+        <a href="https://wa.me/5514999059950" target="_blank">(14 99905-9950)</a> 
+        para receber a chave e finalizar o pagamento.
+      </p>
     </div>
   </section>
 
   <!-- ===== Garantia ===== -->
-  <section class="garantia">
-    <div class="container">
-      <h2>Garantia de Valor</h2>
-      <p><strong>Garantia de Valor ou Reembolso Integral:</strong> Caso você não sinta que recebeu clareza e valor na leitura, basta enviar “Reembolso” no WhatsApp <a href="https://wa.me/5514999059950" target="_blank">(14 99905-9950)</a> em até 12 h após o envio do áudio. Você receberá 100 % do seu dinheiro de volta sem perguntas.</p>
-      <p><strong>Reenvio Grátis em Até 12 h:</strong> Se o áudio não estiver claro, envie “Reenvio” e geramos um novo arquivo em até 12 h.</p>
-    </div>
+  <section class="garantia container">
+    <h2>Garantia de Valor</h2>
+    <p>
+      <strong>Garantia de Valor ou Reembolso Integral:</strong> Caso você não sinta que
+      recebeu clareza e valor na leitura, basta enviar “Reembolso” no WhatsApp
+      <a href="https://wa.me/5514999059950" target="_blank">(14 99905-9950)</a> em até 12h
+      após o envio do áudio. Você receberá 100 % do seu dinheiro de volta sem perguntas.
+    </p>
+    <p>
+      <strong>Reenvio Grátis em Até 12 h:</strong> Se o áudio não estiver claro, envie
+      “Reenvio” e geramos um novo arquivo em até 12 h.
+    </p>
   </section>
 
   <!-- ===== Footer ===== -->
   <footer>
-    <nav class="links-rodape">
-      <a href="#beneficios">Benefícios</a> •
-      <a href="#depoimentos">Depoimentos</a> •
-      <a href="https://wa.me/5514999059950" target="_blank">Contato (WhatsApp)</a> •
-      <a href="#faq">FAQ</a>
-    </nav>
-    <div class="redes-sociais" style="margin-top: 1rem;">
-      <a href="https://instagram.com/franco.atendimento" target="_blank">Instagram</a> •
-      <a href="#" target="_blank">YouTube</a>
+    <div class="container">
+      <nav class="links-rodape">
+        <a href="#beneficios">Benefícios</a> •
+        <a href="#depoimentos">Depoimentos</a> •
+        <a href="https://wa.me/5514999059950" target="_blank">Contato WhatsApp</a> •
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="redes-sociais">
+        <a href="https://instagram.com/franco.atendimento" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+      <p>© 2025 | Tiago Franco – Leitura de Tarot. Todos os direitos reservados.</p>
     </div>
-    <p style="margin-top: 1rem;">© 2025 | Tiago Franco – Leitura de Tarot. Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>
