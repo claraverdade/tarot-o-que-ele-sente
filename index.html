@@ -1,25 +1,327 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luna Mystica - Consultas de Tarot Profissionais | Orientação Espiritual</title>
-    <meta name="description" content="Consultas de Tarot personalizadas com Luna Mystica. 15 anos de experiência em orientação espiritual, autoconhecimento e transformação pessoal." />
-    <meta name="author" content="Luna Mystica" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Você Ainda Sente Algo… Mas Ele Sumiu | Leitura de Tarot</title>
+  <meta name="description" content="Consulta de Tarot rápida: descubra o motivo do sumiço dele em até 12 h, por áudio no WhatsApp, por apenas R$ 25." />
+  
+  <!-- Google Fonts: Montserrat -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
 
-    <meta property="og:title" content="Luna Mystica - Consultas de Tarot Profissionais" />
-    <meta property="og:description" content="Descubra os segredos do seu destino com consultas de Tarot personalizadas e orientação espiritual profissional." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Montserrat", sans-serif;
+      background-color: #faf8f5;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    h1, h2 {
+      font-weight: 700;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    /* ===== Hero ===== */
+    .hero {
+      text-align: center;
+      padding: 4rem 0 3rem;
+    }
+    .subtitulo {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+    .btn-primary {
+      display: inline-block;
+      background-color: #5d3fd3;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 700;
+      transition: background-color 0.2s ease-in-out;
+      margin-top: 1rem;
+    }
+    .btn-primary:hover {
+      background-color: #4b2fb0;
+    }
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    /* ===== Benefícios ===== */
+    .beneficios ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+    .beneficios li {
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+      position: relative;
+    }
+    .beneficios li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #5d3fd3;
+      font-weight: bold;
+    }
+
+    /* ===== Depoimentos ===== */
+    .depoimentos blockquote {
+      margin: 2rem 0;
+      padding: 1rem 1.5rem;
+      border-left: 4px solid #5d3fd3;
+      background-color: #fff;
+      border-radius: 4px;
+    }
+    .depoimentos blockquote p {
+      font-style: italic;
+      color: #444;
+    }
+    .depoimentos footer {
+      margin-top: 0.75rem;
+      text-align: right;
+      font-weight: 700;
+      color: #333;
+    }
+
+    /* ===== Vídeo ===== */
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 */
+      height: 0;
+      overflow: hidden;
+      margin: 2rem 0;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* ===== Ofertas e CTAs ===== */
+    .ofertas {
+      margin: 3rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .oferta-card {
+      background-color: #fff;
+      padding: 1.75rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .oferta-card h2 {
+      margin-bottom: 0.5rem;
+      color: #5d3fd3;
+    }
+    .oferta-card p {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    /* ===== FAQ ===== */
+    .faq-item {
+      margin-bottom: 1.5rem;
+    }
+    .faq-item p:first-of-type {
+      font-weight: 700;
+      color: #5d3fd3;
+      margin-bottom: 0.5rem;
+    }
+    .faq-item p:last-of-type {
+      color: #555;
+    }
+
+    /* ===== Garantia ===== */
+    .garantia {
+      background-color: #fff;
+      padding: 1.75rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .garantia h2 {
+      margin-bottom: 1rem;
+      color: #5d3fd3;
+    }
+    .garantia p {
+      margin-bottom: 0.75rem;
+      color: #555;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background-color: #f1f0ed;
+      padding: 2rem 0 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 3rem;
+    }
+    .links-rodape a {
+      margin: 0 0.5rem;
+      color: #5d3fd3;
+      font-weight: 700;
+    }
+    .redes-sociais a {
+      margin: 0 0.3rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Hero Section ===== -->
+  <section class="hero">
+    <div class="container">
+      <h1>Você Ainda Sente Algo… Mas Ele Simplesmente Sumiu</h1>
+      <p class="subtitulo">
+        Resposta em até 12&nbsp;h por áudio no WhatsApp&nbsp;– Por apenas <strong>R$&nbsp;25</strong>
+      </p>
+      <a href="https://loja.infinitepay.io/franco-atendimento/itw3422-consulta-de-tarot-25-min" class="btn-primary">Quero Minha Leitura Agora</a>
+    </div>
+  </section>
+
+  <!-- ===== Benefícios ===== -->
+  <section class="beneficios">
+    <div class="container">
+      <h2>O Que Você Recebe Quando Encomenda Sua Leitura</h2>
+      <ul>
+        <li><strong>Descubra o Motivo Real do “Sumiço”</strong></li>
+        <li><strong>Orientação Prática para Reconquistá-lo (ou Seguir em Frente)</strong></li>
+        <li><strong>Leitura Intuitiva e Empática, Feita Exclusivamente Para Você</strong></li>
+        <li><strong>Entrega Rápida: Áudio de Até 5 Minutos no WhatsApp em 12&nbsp;h</strong></li>
+        <li><strong>PDF Resumido com os Pontos Principais e Mini-Plano de Ação</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Depoimentos ===== -->
+  <section class="depoimentos">
+    <div class="container">
+      <h2>O Que Elas Falam</h2>
+      <blockquote>
+        <p>“Ele sumiu por dois meses. Achei que não me amava mais. Com essa leitura, eu entendi que havia bloqueios emocionais de ambos. Hoje sinto mais confiança e clareza.”</p>
+        <footer>— Ana, 28 anos, São Paulo</footer>
+      </blockquote>
+      <blockquote>
+        <p>“Minha cabeça estava uma bagunça. O áudio me mostrou os padrões que eu nem via. Em menos de 12&nbsp;h, fiquei mais segura para conversar com ele.”</p>
+        <footer>— Vanessa, 31 anos, Belo Horizonte</footer>
+      </blockquote>
+      <blockquote>
+        <p>“Já tinha tentado resolver tudo sozinha, mas não conseguia entender o silêncio dele. Essa leitura me deu luz para seguir adiante, sem sufocar ninguém.”</p>
+        <footer>— Mariana, 24 anos, Curitiba</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ===== Vídeo de Apresentação (Opcional) ===== -->
+  <!-- Assim que gravar, substitua SEU_VIDEO_ID pelo ID do YouTube -->
+  <section class="video">
+    <div class="container">
+      <h2>Assista ao Vídeo de Apresentação</h2>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/SEU_VIDEO_ID"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Ofertas e CTAs ===== -->
+  <section class="ofertas">
+    <div class="container">
+      <div class="oferta-card">
+        <h2>Leitura Rápida em 12&nbsp;h</h2>
+        <p><strong>R$ 25</strong></p>
+        <a href="https://loja.infinitepay.io/franco-atendimento/itw3422-consulta-de-tarot-25-min" class="btn-primary">Quero Minha Leitura Agora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq">
+    <div class="container">
+      <h2>Perguntas Frequentes</h2>
+
+      <div class="faq-item">
+        <p><strong>E se eu não receber a leitura em 12 h?</strong></p>
+        <p>Envie a palavra <strong>“Atraso”</strong> no WhatsApp <a href="https://wa.me/5514999059950" target="_blank">(14 99905-9950)</a> que refazemos a leitura em até 12 h ou devolvemos 100 % do valor.</p>
+      </div>
+
+      <div class="faq-item">
+        <p><strong>Como recebo o áudio da leitura?</strong></p>
+        <p>Você receberá um link de download no próprio WhatsApp. Basta clicar para ouvir.</p>
+      </div>
+
+      <div class="faq-item">
+        <p><strong>E se eu quiser conversar pessoalmente após a leitura?</strong></p>
+        <p>Disponibilizamos consultoria individual (sessão 30 min) como upsell, mediante agendamento. Consulte valores no WhatsApp.</p>
+      </div>
+
+      <div class="faq-item">
+        <p><strong>Posso pagar de outra forma se não conseguir pelo link?</strong></p>
+        <p>Sim: PIX ou Cartão. Envie “PIX” no WhatsApp <a href="https://wa.me/5514999059950" target="_blank">(14 99905-9950)</a> para receber a chave e finalizar o pagamento.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Garantia ===== -->
+  <section class="garantia">
+    <div class="container">
+      <h2>Garantia de Valor</h2>
+      <p><strong>Garantia de Valor ou Reembolso Integral:</strong> Caso você não sinta que recebeu clareza e valor na leitura, basta enviar “Reembolso” no WhatsApp <a href="https://wa.me/5514999059950" target="_blank">(14 99905-9950)</a> em até 12 h após o envio do áudio. Você receberá 100 % do seu dinheiro de volta sem perguntas.</p>
+      <p><strong>Reenvio Grátis em Até 12 h:</strong> Se o áudio não estiver claro, envie “Reenvio” e geramos um novo arquivo em até 12 h.</p>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <nav class="links-rodape">
+      <a href="#beneficios">Benefícios</a> •
+      <a href="#depoimentos">Depoimentos</a> •
+      <a href="https://wa.me/5514999059950" target="_blank">Contato (WhatsApp)</a> •
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="redes-sociais" style="margin-top: 1rem;">
+      <a href="https://instagram.com/franco.atendimento" target="_blank">Instagram</a> •
+      <a href="#" target="_blank">YouTube</a>
+    </div>
+    <p style="margin-top: 1rem;">© 2025 | Tiago Franco – Leitura de Tarot. Todos os direitos reservados.</p>
+  </footer>
+</body>
 </html>
