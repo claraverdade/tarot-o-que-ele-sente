@@ -33,8 +33,7 @@ const HeroSection = () => {
             <span className="gold-text block mt-2">Mas Ele Simplesmente Sumiu"</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-mystical-midnight mb-8 max-w-2xl mx-auto leading-relaxed">Resposta em até 12h por áudio no WhatsApp
-De 79,90 - Por apenas - R$ 25</p>
+          <p className="text-xl md:text-2xl text-mystical-midnight mb-8 max-w-2xl mx-auto leading-relaxed">Resposta em até 12h por áudio no WhatsApp de R$ 75,00 - Por apenas - R$ 25</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button className="mystical-button text-lg px-8 py-4 h-auto">
