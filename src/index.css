@@ -1,6 +1,9 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -97,5 +100,48 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
   }
+
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+@layer components {
+  .mystical-card {
+    @apply bg-gradient-to-br from-mystical-purple/10 to-mystical-cosmic/20 backdrop-blur-sm border border-mystical-purple/20 rounded-xl;
+  }
+  
+  .gold-text {
+    @apply bg-gradient-to-r from-mystical-gold to-mystical-gold-light bg-clip-text text-transparent;
+  }
+  
+  .mystical-button {
+    @apply bg-gold-gradient text-mystical-midnight font-semibold py-3 px-8 rounded-full transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-mystical-gold/25;
+  }
+}
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
 }
