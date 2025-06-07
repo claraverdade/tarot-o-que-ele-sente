@@ -6,7 +6,7 @@ import VideoSection from "@/components/VideoSection";
 import OfferSection from "@/components/OfferSection";
 import FAQSection from "@/components/FAQSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
-import FeaturedImageSection from "@/components/FeaturedImageSection";
+import AboutSection from "@/components/AboutSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -19,7 +19,7 @@ const Index = () => {
       <OfferSection />
       <FAQSection />
       <GuaranteeSection />
-      <FeaturedImageSection />
+      <AboutSection />
       <Footer />
     </div>
   );

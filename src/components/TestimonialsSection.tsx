@@ -6,24 +6,24 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       name: "Ana",
-      age: "28 anos",
+      age: "28",
       location: "São Paulo",
-      text: "Ele sumiu por dois meses. Achei que não me amava mais. Com essa leitura, eu entendi que havia bloqueios emocionais de ambos. Hoje sinto mais confiança e clareza.",
+      text: "Ele sumiu por dois meses. Achei que não me amava mais. Com essa leitura, entendi que havia bloqueios emocionais entre nós dois. Foi como se eu pudesse respirar de novo, com mais confiança no que sentia.",
       avatar: "A"
     },
     {
-      name: "Vanessa",
-      age: "31 anos",
-      location: "Belo Horizonte",
-      text: "Minha cabeça estava uma bagunça. O áudio me mostrou os padrões que eu nem via. Em menos de um dia, fiquei mais segura para conversar com ele.",
-      avatar: "V"
+      name: "Gabriel",
+      age: "44",
+      location: "Botucatu",
+      text: "Eu entrei buscando uma direção… e saí com uma clareza que eu não esperava. A leitura foi extremamente direcionadora. O Tiago tem uma objetividade absurda — ele vai direto no que importa. Quando ele disse que tinha 25 anos de jornada, tudo fez sentido. Saí com a mente mais clara e o coração mais tranquilo.",
+      avatar: "G"
     },
     {
-      name: "Mariana",
-      age: "24 anos",
-      location: "Curitiba",
-      text: "Já tinha tentado resolver tudo sozinha, mas não conseguia entender o silêncio dele. Essa leitura me deu luz para seguir adiante, sem sufocar ninguém.",
-      avatar: "M"
+      name: "Renata",
+      age: "36",
+      location: "Recife",
+      text: "Eu estava em um estado de ansiedade que não me deixava dormir. A leitura me trouxe calma, clareza e coragem pra aceitar o que eu já sentia, mas não queria ver. Foi como conversar com alguém que entende a alma da gente. Hoje me sinto mais forte e mais em paz.",
+      avatar: "R"
     }
   ];
 
@@ -33,7 +33,7 @@ const TestimonialsSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-cinzel text-4xl md:text-5xl font-bold text-mystical-graphite mb-6">
-              <span className="gold-text">Depoimentos</span>
+              🌟 <span className="gold-text">Depoimentos Reais</span>
             </h2>
           </div>
 

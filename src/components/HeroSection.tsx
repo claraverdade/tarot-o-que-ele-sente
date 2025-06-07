@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Star, Sparkles, Moon, Clock, MessageCircle } from "lucide-react";
+import { Star, Sparkles, Moon, Clock, MessageCircle, Heart } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -32,15 +32,31 @@ const HeroSection = () => {
       </div>
 
       <div className="container mx-auto px-4 text-center z-10">
-        <div className="max-w-4xl mx-auto animate-fade-in">
-          <h1 className="font-cinzel text-4xl md:text-6xl font-bold text-mystical-graphite mb-6 leading-tight">
-            "Você Ainda Sente Algo…
-            <span className="gold-text block mt-2">Mas Ele Simplesmente Sumiu"</span>
+        <div className="max-w-5xl mx-auto animate-fade-in">
+          <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl font-bold text-mystical-graphite mb-6 leading-tight">
+            Você Ainda Sente Algo…
+            <span className="gold-text block mt-2">Mas Ele Simplesmente Sumiu</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-mystical-midnight mb-8 max-w-2xl mx-auto leading-relaxed">
-            Resposta em até 12h por áudio no WhatsApp de R$ 75,00 - Por apenas - R$ 25
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <Heart className="w-6 h-6 text-mystical-purple" />
+            <p className="text-lg md:text-xl text-mystical-midnight max-w-3xl mx-auto leading-relaxed">
+              Quando o silêncio dói mais do que uma resposta, o Tarot pode trazer a verdade que seu coração precisa ouvir.
+            </p>
+            <Heart className="w-6 h-6 text-mystical-purple" />
+          </div>
+
+          <p className="text-lg md:text-xl text-mystical-midnight mb-6 max-w-2xl mx-auto">
+            <strong>Leitura Espiritual Exclusiva</strong>, entregue por áudio no WhatsApp em até 12h
           </p>
+
+          <div className="mb-8">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <span className="text-2xl md:text-3xl text-mystical-cosmic line-through">R$ 75</span>
+              <span className="text-3xl md:text-4xl font-bold text-mystical-purple">R$ 25</span>
+            </div>
+            <p className="text-mystical-midnight">com garantia de clareza ou seu dinheiro de volta</p>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button 
@@ -49,16 +65,15 @@ const HeroSection = () => {
             >
               Quero Minha Leitura Agora
             </Button>
-            <Button 
-              variant="outline" 
-              className="border-mystical-purple text-mystical-purple hover:bg-mystical-purple hover:text-white transition-all duration-300 text-lg px-8 py-4 h-auto"
-              onClick={() => window.open('https://loja.infinitepay.io/franco-atendimento/itw3422-consulta-de-tarot-25-min', '_blank')}
-            >
-              Ver Experiência Completa
-            </Button>
           </div>
 
-          <div className="flex justify-center items-center gap-8 text-mystical-cosmic">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-mystical-midnight leading-relaxed mb-4">
+              <strong>Descubra a verdade por trás do afastamento.</strong> Receba uma leitura sensível e personalizada, feita especialmente para você, com orientação prática para seguir em frente — ou, quem sabe, reconectar esse amor.
+            </p>
+          </div>
+
+          <div className="flex justify-center items-center gap-8 text-mystical-cosmic mt-8">
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5 text-mystical-purple" />
               <span>Entrega em 12h</span>

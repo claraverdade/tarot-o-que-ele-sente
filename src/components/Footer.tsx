@@ -1,5 +1,5 @@
 
-import { Heart, Instagram, MessageCircle, Mail, FileText } from "lucide-react";
+import { Heart, Instagram, MessageCircle, Mail, FileText, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
               <span className="text-mystical-purple">TIAGO FRANCO</span>
             </h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Leitura de Tarot especializada em relacionamentos e questões do coração.
+              Leitura de Tarot especializada em relacionamentos e questões do coração há mais de 25 anos.
             </p>
             <div className="flex gap-4">
               <a 
@@ -23,42 +23,31 @@ const Footer = () => {
                 <Instagram className="w-5 h-5" />
               </a>
               <a 
-                href="https://wa.me/5514999059950?text=Olá,%20quero%20mais%20informações!" 
+                href="https://wa.me/5514999059950?text=Estou%20aqui%20na%20sua%20p%C3%A1gina%20e%20estou%20com%20d%C3%BAvidas%2Fproblemas%2C%20pode%20me%20ajudar%3F" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-mystical-purple hover:text-mystical-purple-dark transition-colors"
               >
                 <MessageCircle className="w-5 h-5" />
               </a>
+              <a 
+                href="https://youtube.com/@TarotDaVerdadeNoAmor" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-mystical-purple hover:text-mystical-purple-dark transition-colors"
+              >
+                <Youtube className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-4">Links Rápidos</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-mystical-purple transition-colors">Sobre</a></li>
-              <li><a href="#" className="hover:text-mystical-purple transition-colors">Depoimentos</a></li>
-              <li>
-                <a 
-                  href="https://wa.me/5514999059950?text=Olá,%20quero%20mais%20informações!" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-mystical-purple transition-colors"
-                >
-                  Contato (WhatsApp)
-                </a>
-              </li>
-              <li><a href="#" className="hover:text-mystical-purple transition-colors">Política de Reembolso</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-white mb-4">Contato</h4>
+            <h4 className="font-semibold text-white mb-4">📬 Contato</h4>
             <ul className="space-y-3 text-gray-300">
               <li className="flex items-center gap-2">
                 <MessageCircle className="w-4 h-4 text-mystical-purple" />
                 <a 
-                  href="https://wa.me/5514999059950?text=Olá,%20quero%20mais%20informações!" 
+                  href="https://wa.me/5514999059950?text=Estou%20aqui%20na%20sua%20p%C3%A1gina%20e%20estou%20com%20d%C3%BAvidas%2Fproblemas%2C%20pode%20me%20ajudar%3F" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-mystical-purple transition-colors"
@@ -67,28 +56,58 @@ const Footer = () => {
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-mystical-purple" />
-                <span>franco.atendimento001@gmail.com</span>
+                <Instagram className="w-4 h-4 text-mystical-purple" />
+                <a 
+                  href="https://www.instagram.com/franco.atendimento" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-mystical-purple transition-colors"
+                >
+                  @franco.atendimento
+                </a>
               </li>
               <li className="flex items-center gap-2">
-                <FileText className="w-4 h-4 text-mystical-purple" />
-                <span>Política de Privacidade</span>
+                <Youtube className="w-4 h-4 text-mystical-purple" />
+                <a 
+                  href="https://youtube.com/@TarotDaVerdadeNoAmor" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-mystical-purple transition-colors"
+                >
+                  Canal no YouTube
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-mystical-purple" />
+                <span>franco.atendimento001@gmail.com</span>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-4">Garantias</h4>
+            <h4 className="font-semibold text-white mb-4">🔒 Segurança</h4>
             <ul className="space-y-2 text-gray-300 text-sm">
-              <li>✓ Reembolso em 12h</li>
-              <li>✓ Entrega garantida</li>
-              <li>✓ Suporte completo</li>
+              <li>✓ Pagamento por loja oficial</li>
+              <li>✓ Atendimento humano e real</li>
               <li>✓ 100% Confidencial</li>
+              <li>✓ Reembolso garantido</li>
+              <li>✓ Sigilo absoluto</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-white mb-4">Links</h4>
+            <ul className="space-y-2 text-gray-300 text-sm">
+              <li><a href="#" className="hover:text-mystical-purple transition-colors">Política de Privacidade</a></li>
+              <li><a href="#" className="hover:text-mystical-purple transition-colors">Política de Reembolso</a></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-600 mt-8 pt-8 text-center">
+          <p className="text-gray-400 flex items-center justify-center gap-2 mb-2">
+            🕊️ Feito com sensibilidade e propósito, para te ajudar a encontrar clareza, verdade e direção
+          </p>
           <p className="text-gray-400 flex items-center justify-center gap-2">
             Feito com <Heart className="w-4 h-4 text-mystical-purple" /> para conectar corações
           </p>
